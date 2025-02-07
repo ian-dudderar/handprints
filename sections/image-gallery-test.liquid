@@ -1,81 +1,142 @@
 {%- style -%}
-.image-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center; /* Centers images in each row */
-  gap: 20px; /* Adjust spacing between images */
-}
+   .body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
 
-.gallery-item {
-  max-width: 100%; /* Ensures images don’t overflow */
-}
+    .gallery-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-.gallery-item img {
-  display: block;
-  max-width: 100%; /* Ensures responsiveness */
-  height: auto;
-}
+    .gallery {
+        column-count: 3;
+        column-gap: 20px;
+    }
+
+    .gallery-item {
+        break-inside: avoid;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-radius: 8px;
+        transition: 1s ease;
+
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        cursor: pointer;
+        transition: 1s ease;
+    }
+
+    @media (min-width: 768px) {
+      /* .gallery-item img:hover {
+        transform: scale(0.9);
+        box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+      } */
+      .gallery-item:hover {
+        transform: scale(0.9);
+        box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+      }
+    }
+
+    @media (max-width: 768px) {
+        .gallery {
+            column-count: 2;
+        }
+
+        
+    }
+
+    @media (max-width: 480px) {
+        .gallery {
+            column-count: 1;
+        }
+    }
+
+    
 {%- endstyle -%}
 
 
-<div class="image-gallery">
-  {% for block in section.blocks %}
-    <div class="gallery-item">
-      {% if block.settings.image %}
-        <img 
-          src="{{ block.settings.image | img_url: 'large' }}" 
-          alt="{{ block.settings.image.alt | escape }}"
-          width="{{ block.settings.width | default: block.settings.image.width }}" 
-          height="{{ block.settings.height | default: block.settings.image.height }}"
-        >
-      {% else %}
-        <p>No image selected</p>
-      {% endif %}
+
+
+<div class="gallery-container">
+    <div class="gallery" id="imageGallery">
+      {% for block in section.blocks %}
+				{% if block.settings.image %}
+					<div class="gallery-item">
+            <img src="{{ block.settings.image | img_url : 'large'}}" alt="Image">
+          </div>
+				{% else %}
+					<p>No image selected</p>
+				{% endif %}
+		{% endfor %}
     </div>
-  {% endfor %}
 </div>
+
+{% javascript %}
+  // const imageGallery = document.getElementById('imageGallery');
+
+  // const images = [
+  //     { src: "https://picsum.photos/id/10/800/600", alt: "Landscape" },
+  //     { src: "https://picsum.photos/id/20/600/800", alt: "Architecture" },
+  //     { src: "https://picsum.photos/id/30/700/500", alt: "Nature" },
+  //     { src: "https://picsum.photos/id/40/900/600", alt: "People" },
+  //     { src: "https://picsum.photos/id/50/600/900", alt: "Objects" },
+  //     { src: "https://picsum.photos/id/60/800/800", alt: "Animals" },
+  //     { src: "https://picsum.photos/id/70/700/700", alt: "Technology" },
+  //     { src: "https://picsum.photos/id/80/900/500", alt: "City" },
+  //     { src: "https://picsum.photos/id/90/600/700", alt: "Food" },
+  // ];
+
+  // function createImageElement(image) {
+  //     const galleryItem = document.createElement('div');
+  //     galleryItem.className = 'gallery-item';
+
+  //     const img = document.createElement('img');
+  //     img.src = image.src;
+  //     img.alt = image.alt;
+
+  //     galleryItem.appendChild(img);
+  //     imageGallery.appendChild(galleryItem);
+  // }
+
+  // images.forEach(createImageElement);
+{% endjavascript %}
+
 
 {% schema %}
   {
     "name": "Image Gallery",
-    "tag": "section",
-    "max_blocks": 6,
-    "settings": [],
-    "blocks": [
-      {
-        "type": "image",
-        "name": "Gallery Image",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "image",
-            "label": "Select an image"
-          },
-          {
-            "type": "range",
-            "id": "width",
-            "label": "Custom Width (px)",
-            "min": 100,
-            "max": 500,
-            "default": 100,
-            "step": 10
-          },
-          {
-            "type": "range",
-            "id": "height",
-            "label": "Custom Height (px)",
-            "min": 100,
-            "max": 500,
-            "default": 100,
-            "step": 10
-          }
-        ]
+    "limit": 1,
+    "locales": {
+      "en": {
+        "title": "Image Gallery"
       }
-    ],
+    },
+		"blocks": [
+			{
+				"type": "image",
+				"name": "Image",
+				"settings": [
+					{
+						"type": "image_picker",
+						"id": "image",
+						"label": "Image"
+					}
+				]
+			}
+		],
+		"class":"body",
     "presets": [
       {
-        "name": "Image Gallery",
-        "blocks": [
+        "name": "Image Gallery2",
+				"blocks": [
           {
             "type": "image"
           },
@@ -86,4 +147,4 @@
       }
     ]
   }
-  {% endschema %}
+{% endschema %}

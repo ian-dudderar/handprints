@@ -19,10 +19,6 @@
             transition: 1s ease;
         }
 
-        .lp-img-gallery img:hover {
-            transform: scale(0.8);
-            box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
-        }
 
         /* Wrapper */
         .lp-image-wrapper {
@@ -96,7 +92,6 @@
         }
 
         @media (min-width: 640px) {
-
             #lpImgModalClose,
             #lpNextImage,
             #lpPrevImage {
@@ -104,6 +99,26 @@
                 border: unset;
             }
         }
+				@media (min-width: 768px) {
+					
+					.lp-img-gallery img:hover {
+							transform: scale(0.8);
+							box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+					}
+				}
+				@media (max-width: 768px) {
+					.image-gallery {
+						padding: 0px
+					}
+					.lp-img-gallery {
+							width: 80%;
+							margin: auto;
+							display: grid;
+							grid-template-columns: 1fr
+							/* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+					}
+
+				}
 {%- endstyle -%}
 <div class="lp-image-wrapper" id="lpModalWrapper">
     <img src="" id="fullImg" />
@@ -113,7 +128,7 @@
 </div>
 
 <div class="lp-img-gallery" id="lpImgGallery">
-    <img src="https://picsum.photos/id/237/300/300"  />
+    {% comment %} <img src="https://picsum.photos/id/237/300/300"  />
     <img src="https://picsum.photos/id/238/300/300"  />
     <img src="https://picsum.photos/id/239/300/300"  />
     <img src="https://picsum.photos/id/240/300/300"  />
@@ -129,8 +144,18 @@
     <img src="https://picsum.photos/id/238/300/300"  />
     <img src="https://picsum.photos/id/243/300/300"  />
     <img src="https://picsum.photos/id/240/300/300"  />
-    <img src="https://picsum.photos/id/239/300/300"  />
+    <img src="https://picsum.photos/id/239/300/300"  /> {% endcomment %}
+		{% for block in section.blocks %}
+				{% if block.settings.image %}
+					<img 
+						src="{{ block.settings.image | img_url: 'large' }}" 
+						alt="{{ block.settings.image.alt | escape }}"
 
+					>
+				{% else %}
+					<p>No image selected</p>
+				{% endif %}
+		{% endfor %}
 </div>
 
 {% javascript %}
@@ -236,10 +261,31 @@
         "title": "Image Gallery"
       }
     },
+		"blocks": [
+			{
+				"type": "image",
+				"name": "Image",
+				"settings": [
+					{
+						"type": "image_picker",
+						"id": "image",
+						"label": "Image"
+					}
+				]
+			}
+		],
 		"class":"image-gallery",
     "presets": [
       {
-        "name": "Image Gallery2"
+        "name": "Image Gallery",
+				"blocks": [
+          {
+            "type": "image"
+          },
+          {
+            "type": "image"
+          }
+        ]
       }
     ]
   }
