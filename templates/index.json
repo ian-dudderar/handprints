@@ -1,1 +1,355 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"text":{"type":"text","settings":{"text":"Shop, Brows and Contact","text_style":"caption-with-letter-spacing"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop all","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["text","button"],"settings":{"image":"shopify:\/\/shop_images\/main_banner.png","image_overlay_opacity":0,"image_height":"large","desktop_content_position":"middle-left","show_text_box":false,"desktop_content_alignment":"left","color_scheme":"scheme-5","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":false}},"image_with_text_i4RJWR":{"type":"image-with-text","blocks":{"heading_t9RJqD":{"type":"heading","settings":{"heading":"Welcome to  Hand Prints!","heading_size":"h1"}},"text_U6A7Aw":{"type":"text","settings":{"text":"<p>Here you can purchase original paintings, contact for commissions, and stay up to date with newly released art work! <\/p>","text_style":"body"}},"button_QBN8py":{"type":"button","settings":{"button_label":"Meet the Artist!","button_link":"shopify:\/\/pages\/about-the-artist","button_style_secondary":false}}},"block_order":["heading_t9RJqD","text_U6A7Aw","button_QBN8py"],"settings":{"image":"shopify:\/\/shop_images\/Untitled_design_1.png","height":"small","desktop_image_width":"small","layout":"text_first","desktop_content_position":"top","desktop_content_alignment":"left","content_layout":"no-overlap","section_color_scheme":"scheme-2","color_scheme":"scheme-5","image_behavior":"none","mobile_content_alignment":"left","padding_top":36,"padding_bottom":36}},"rich_text":{"type":"rich-text","blocks":{"text":{"type":"text","settings":{"text":"<p>Original Art Work| Expressing Creativity| Charleston, South Carolina <\/p>"}}},"block_order":["text"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-f334b586-e788-450f-8226-97f2be29db9a","full_width":true,"padding_top":4,"padding_bottom":4}},"rich_text_3TLK9i":{"type":"rich-text","disabled":true,"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-f334b586-e788-450f-8226-97f2be29db9a","full_width":true,"padding_top":8,"padding_bottom":8}},"image_banner_bmQ4RA":{"type":"image-banner","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Yellow_Sunflowers_banner_3x2_79019de6-29f0-4c5b-84d4-505578a7eb6b.png","image_overlay_opacity":40,"image_height":"small","desktop_content_position":"middle-left","show_text_box":false,"desktop_content_alignment":"left","color_scheme":"scheme-5","image_behavior":"ambient","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":false}},"rich_text_JUcMQH":{"type":"rich-text","disabled":true,"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-f334b586-e788-450f-8226-97f2be29db9a","full_width":true,"padding_top":8,"padding_bottom":8}},"image_banner_W9GyCd":{"type":"image-banner","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Abigial_banner_3x2_7cabd634-f912-425e-8a01-2ca980be3016.png","image_overlay_opacity":40,"image_height":"small","desktop_content_position":"middle-left","show_text_box":false,"desktop_content_alignment":"left","color_scheme":"scheme-5","image_behavior":"ambient","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":false}},"rich_text_6kwBhm":{"type":"rich-text","disabled":true,"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-f334b586-e788-450f-8226-97f2be29db9a","full_width":true,"padding_top":8,"padding_bottom":8}},"image_banner_3FbNwq":{"type":"image-banner","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Mushroom_Garden_3x2_d45faebb-923e-4082-9889-cbb034bde8b6.png","image_overlay_opacity":40,"image_height":"small","desktop_content_position":"middle-left","show_text_box":false,"desktop_content_alignment":"left","color_scheme":"scheme-5","image_behavior":"ambient","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":false}},"rich_text_8G4EQB":{"type":"rich-text","disabled":true,"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"scheme-f334b586-e788-450f-8226-97f2be29db9a","full_width":true,"padding_top":8,"padding_bottom":8}},"image_banner_R3bN7r":{"type":"image-banner","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/gold_mushrooms_banner_3x2_13a2d0e8-e19b-4d7f-9273-6ecf9454f550.png","image_overlay_opacity":40,"image_height":"small","desktop_content_position":"middle-left","show_text_box":false,"desktop_content_alignment":"left","color_scheme":"scheme-5","image_behavior":"ambient","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":false}},"featured_collection1":{"type":"featured-collection","disabled":true,"settings":{"title":"Whimsical Paintings","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"whimsical-paintings-with-gold-accents","products_to_show":4,"columns_desktop":5,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"scheme-f334b586-e788-450f-8226-97f2be29db9a","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"bulk","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":52}},"collection_list_fd3FQQ":{"type":"collection-list","blocks":{"featured_collection_NBqH6H":{"type":"featured_collection","settings":{"collection":"all-art-work"}},"featured_collection_GJptKr":{"type":"featured_collection","settings":{"collection":"disco-ball-paintings"}},"featured_collection_gAW8Lq":{"type":"featured_collection","settings":{"collection":"whimsical-paintings-with-gold-accents"}},"featured_collection_ByiaJG":{"type":"featured_collection","settings":{"collection":"bottles-tumblr-mugs-and-bottles"}}},"block_order":["featured_collection_NBqH6H","featured_collection_GJptKr","featured_collection_gAW8Lq","featured_collection_ByiaJG"],"settings":{"title":"Shop Art","heading_size":"h1","image_ratio":"square","columns_desktop":4,"color_scheme":"scheme-1","show_view_all":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"newsletter_3EmdEz":{"type":"newsletter","blocks":{"heading_Mdcap6":{"type":"heading","settings":{"heading":"Subscribe to emails","heading_size":"h2"}},"paragraph_HU6GYP":{"type":"paragraph","settings":{"text":"<p>Be the first to know about new collections and exclusive offers.<\/p>"}},"email_form_fTy44Y":{"type":"email_form","settings":{}}},"block_order":["heading_Mdcap6","paragraph_HU6GYP","email_form_fTy44Y"],"settings":{"color_scheme":"scheme-f334b586-e788-450f-8226-97f2be29db9a","full_width":true,"padding_top":24,"padding_bottom":20}}},"order":["image_banner","image_with_text_i4RJWR","rich_text","rich_text_3TLK9i","image_banner_bmQ4RA","rich_text_JUcMQH","image_banner_W9GyCd","rich_text_6kwBhm","image_banner_3FbNwq","rich_text_8G4EQB","image_banner_R3bN7r","featured_collection1","collection_list_fd3FQQ","newsletter_3EmdEz"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "button": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Shop all",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/main_banner.svg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-f334b586-e788-450f-8226-97f2be29db9a",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "rich_text_3TLK9i": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-f334b586-e788-450f-8226-97f2be29db9a",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Original Art Work| Expressing Creativity| Charleston, South Carolina </p>"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-f334b586-e788-450f-8226-97f2be29db9a",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
+    },
+    "collection_list_fd3FQQ": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_NBqH6H": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all-art-work"
+          }
+        },
+        "featured_collection_GJptKr": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "disco-ball-paintings"
+          }
+        },
+        "featured_collection_gAW8Lq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "whimsical-paintings-with-gold-accents"
+          }
+        },
+        "featured_collection_ByiaJG": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bottles-tumblr-mugs-and-bottles"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_NBqH6H",
+        "featured_collection_GJptKr",
+        "featured_collection_gAW8Lq",
+        "featured_collection_ByiaJG"
+      ],
+      "settings": {
+        "title": "Shop Art",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_i4RJWR": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_t9RJqD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to  Hand Prints!",
+            "heading_size": "h1"
+          }
+        },
+        "text_U6A7Aw": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Here you can purchase original paintings, contact for commissions, and stay up to date with newly released art work! </p><p></p><p></p><p><strong>\"Learn to stare at the world like you are about to paint a picture of it- it will never look dull again\"</strong></p>",
+            "text_style": "subtitle"
+          }
+        },
+        "button_QBN8py": {
+          "type": "button",
+          "settings": {
+            "button_label": "Meet the Artist!",
+            "button_link": "shopify://pages/about-the-artist",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_t9RJqD",
+        "text_U6A7Aw",
+        "button_QBN8py"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/IMG_4454_0e89c904-bbec-42bc-841a-a01ac0aab6be.jpg",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "center",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "scheme-2",
+        "color_scheme": "scheme-5",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_bmQ4RA": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Yellow_Sunflowers_banner_3x2_79019de6-29f0-4c5b-84d4-505578a7eb6b.png",
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "rich_text_JUcMQH": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-f334b586-e788-450f-8226-97f2be29db9a",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "image_banner_W9GyCd": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Abigial_banner_3x2_7cabd634-f912-425e-8a01-2ca980be3016.png",
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "rich_text_6kwBhm": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-f334b586-e788-450f-8226-97f2be29db9a",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "image_banner_3FbNwq": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/Mushroom_Garden_3x2_d45faebb-923e-4082-9889-cbb034bde8b6.png",
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "rich_text_8G4EQB": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-f334b586-e788-450f-8226-97f2be29db9a",
+        "full_width": true,
+        "padding_top": 8,
+        "padding_bottom": 8
+      }
+    },
+    "image_banner_R3bN7r": {
+      "type": "image-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/gold_mushrooms_banner_3x2_13a2d0e8-e19b-4d7f-9273-6ecf9454f550.png",
+        "image_overlay_opacity": 40,
+        "image_height": "small",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-5",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "featured_collection1": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "Whimsical Paintings",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "whimsical-paintings-with-gold-accents",
+        "products_to_show": 4,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-f334b586-e788-450f-8226-97f2be29db9a",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "bulk",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 52
+      }
+    },
+    "newsletter_3EmdEz": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_Mdcap6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Subscribe to emails",
+            "heading_size": "h2"
+          }
+        },
+        "paragraph_HU6GYP": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Be the first to know about new collections and exclusive offers.</p>"
+          }
+        },
+        "email_form_fTy44Y": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_Mdcap6",
+        "paragraph_HU6GYP",
+        "email_form_fTy44Y"
+      ],
+      "settings": {
+        "color_scheme": "scheme-f334b586-e788-450f-8226-97f2be29db9a",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "rich_text_3TLK9i",
+    "rich_text",
+    "collection_list_fd3FQQ",
+    "image_with_text_i4RJWR",
+    "image_banner_bmQ4RA",
+    "rich_text_JUcMQH",
+    "image_banner_W9GyCd",
+    "rich_text_6kwBhm",
+    "image_banner_3FbNwq",
+    "rich_text_8G4EQB",
+    "image_banner_R3bN7r",
+    "featured_collection1",
+    "newsletter_3EmdEz"
+  ]
+}

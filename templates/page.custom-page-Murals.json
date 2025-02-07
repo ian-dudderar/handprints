@@ -1,0 +1,130 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_CbajmV": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/6_bc55c6cd-82ae-4515-8fce-82f4a92c2550.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_zbyxD3": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_GzqEJF": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/8_d8f05bd3-6613-4601-a26d-0d32e54cba29.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_DpWdjC": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_h6pxzD": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/7_b7561ed2-3e82-4878-9cf4-2dc116bed889.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "rich_text_bH7rMF": {
+      "type": "rich-text",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "full_width": true,
+        "padding_top": 16,
+        "padding_bottom": 0
+      }
+    },
+    "image_banner_jFtpFN": {
+      "type": "image-banner",
+      "settings": {
+        "image": "shopify://shop_images/humming_bird_banner_f4c5036b-0a55-4ed5-872a-308234cee70e.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-2",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "contact_form_RURXBU": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Contact me if you are interested in large mural paintings! I paint on walls, windows, you name it!",
+        "heading_size": "h2",
+        "color_scheme": "scheme-f334b586-e788-450f-8226-97f2be29db9a",
+        "padding_top": 16,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "image_banner_CbajmV",
+    "rich_text_zbyxD3",
+    "image_banner_GzqEJF",
+    "rich_text_DpWdjC",
+    "image_banner_h6pxzD",
+    "rich_text_bH7rMF",
+    "image_banner_jFtpFN",
+    "contact_form_RURXBU"
+  ]
+}

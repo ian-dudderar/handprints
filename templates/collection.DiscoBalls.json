@@ -37,33 +37,10 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "rich_text_KkmF8w": {
-      "type": "rich-text",
-      "blocks": {
-        "text_kakL4N": {
-          "type": "text",
-          "settings": {
-            "text": "<p>All art is hand painted and final sale. </p>"
-          }
-        }
-      },
-      "block_order": [
-        "text_kakL4N"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-f334b586-e788-450f-8226-97f2be29db9a",
-        "full_width": true,
-        "padding_top": 8,
-        "padding_bottom": 12
-      }
     }
   },
   "order": [
     "banner",
-    "product-grid",
-    "rich_text_KkmF8w"
+    "product-grid"
   ]
 }
