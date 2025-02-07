@@ -1,169 +1,150 @@
 {%- style -%}
-				.image-gallery {
-					padding: 0px 200px;
-				}
+  .image-gallery {
+    padding: 0 200px;
+  }
 
 
-        .lp-img-gallery {
-            width: 80%;
-            margin: 100px auto 50px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-            grid-gap: 30px;
-        }
+  .lp-img-gallery {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-gap: 30px;
+  }
 
-        .lp-img-gallery img {
-            width: 100%;
-            cursor: pointer;
-            transition: 1s ease;
-        }
+  .lp-img-gallery img {
+    width: 100%;
+    cursor: pointer;
+    transition: 1s ease;
+  }
 
 
-        /* Wrapper */
-        .lp-image-wrapper {
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.9);
-            position: fixed;
-            top: 0;
-            left: 0;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 100;
-        }
+  /* Wrapper */
+  .lp-image-wrapper {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
 
-        .lp-image-wrapper img {
-            width: 80%;
-            max-width: 500px;
-            position: absolute;
-            /* transition: transform 0.4s ease-in-out; */
-            transition: opacity 0.3s ease-in-out;
-        }
+  .lp-image-wrapper img {
+    width: 80%;
+    max-width: 500px;
+    position: absolute;
+    /* transition: transform 0.4s ease-in-out; */
+    transition: opacity 0.3s ease-in-out;
+  }
 
-        .lp-image-wrapper span {
-            position: absolute;
-            font-family: sans-serif;
-            color: #fff;
-            cursor: pointer;
-            padding: 5px 8px;
-        }
+  .lp-image-wrapper span {
+    position: absolute;
+    font-family: sans-serif;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 8px;
+  }
 
-        #lpImgModalClose {
-            top: 5%;
-            right: 5%;
-            border: 0.5px #fff solid;
-            border-radius: 20%;
-        }
+  #lpImgModalClose {
+    top: 5%;
+    right: 5%;
+    border: 0.5px #fff solid;
+    border-radius: 20%;
+  }
 
-        #lpNextImage {
-            top: 45%;
-            right: 5%;
-            border: 0.5px #fff solid;
-            border-radius: 20%;
-        }
+  #lpNextImage {
+    top: 45%;
+    right: 5%;
+    border: 0.5px #fff solid;
+    border-radius: 20%;
+  }
 
-        #lpPrevImage {
-            top: 45%;
-            left: 5%;
-            border: 0.5px #fff solid;
-            border-radius: 20%;
-        }
+  #lpPrevImage {
+    top: 45%;
+    left: 5%;
+    border: 0.5px #fff solid;
+    border-radius: 20%;
+  }
 
-        .slide-left {
-            transform: translateX(-100%);
-        }
+  .slide-left {
+    transform: translateX(-100%);
+  }
 
-        .slide-right {
-            transform: translateX(100%);
-        }
+  .slide-right {
+    transform: translateX(100%);
+  }
 
-        .reset-position {
-            transform: translateX(0);
-        }
+  .reset-position {
+    transform: translateX(0);
+  }
 
-        .fade-out {
-            opacity: 0;
-        }
+  .fade-out {
+    opacity: 0;
+  }
 
-        .fade-in {
-            opacity: 1;
-        }
+  .fade-in {
+    opacity: 1;
+  }
 
-        @media (min-width: 640px) {
-            #lpImgModalClose,
-            #lpNextImage,
-            #lpPrevImage {
-                background-color: unset;
-                border: unset;
-            }
-        }
-				@media (min-width: 768px) {
-					
-					.lp-img-gallery img:hover {
-							transform: scale(0.8);
-							box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
-					}
-				}
-				@media (max-width: 768px) {
-					.image-gallery {
-						padding: 0px
-					}
-					.lp-img-gallery {
-							width: 80%;
-							margin: auto;
-							display: grid;
-							grid-template-columns: 1fr
-							/* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-					}
+  @media (min-width: 640px) {
+    #lpImgModalClose,
+    #lpNextImage,
+    #lpPrevImage {
+      background-color: unset;
+      border: unset;
+    }
+  }
+  @media (min-width: 768px) {
 
-				}
+    .lp-img-gallery img:hover {
+      transform: scale(0.8);
+      box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+    }
+  }
+  @media (max-width: 768px) {
+    .image-gallery {
+      padding: 0
+    }
+    .lp-img-gallery {
+      width: 80%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    }
+
+  }
 {%- endstyle -%}
 <div class="lp-image-wrapper" id="lpModalWrapper">
-    <img src="" id="fullImg" />
-    <span id="lpImgModalClose">&#10005; </span>
-    <span id="lpNextImage">&#8594;</span>
-    <span id="lpPrevImage">&#8592;</span>
+  <img src="" id="fullImg" />
+  <span id="lpImgModalClose">&#10005;
+  </span>
+  <span id="lpNextImage">&#8594;</span>
+  <span id="lpPrevImage">&#8592;</span>
 </div>
 
 <div class="lp-img-gallery" id="lpImgGallery">
-    {% comment %} <img src="https://picsum.photos/id/237/300/300"  />
-    <img src="https://picsum.photos/id/238/300/300"  />
-    <img src="https://picsum.photos/id/239/300/300"  />
-    <img src="https://picsum.photos/id/240/300/300"  />
-    <img src="https://picsum.photos/id/241/300/300"  />
-    <img src="https://picsum.photos/id/242/300/300"  />
-    <img src="https://picsum.photos/id/243/300/300"  />
-    <img src="https://picsum.photos/id/244/300/300"  />
-    <img src="https://picsum.photos/id/239/300/300"  />
-    <img src="https://picsum.photos/id/238/300/300"  />
-    <img src="https://picsum.photos/id/243/300/300"  />
-    <img src="https://picsum.photos/id/237/300/300"  />
-    <img src="https://picsum.photos/id/244/300/300"  />
-    <img src="https://picsum.photos/id/238/300/300"  />
-    <img src="https://picsum.photos/id/243/300/300"  />
-    <img src="https://picsum.photos/id/240/300/300"  />
-    <img src="https://picsum.photos/id/239/300/300"  /> {% endcomment %}
-		{% for block in section.blocks %}
-				{% if block.settings.image %}
-					<img 
-						src="{{ block.settings.image | img_url: 'large' }}" 
-						alt="{{ block.settings.image.alt | escape }}"
-
-					>
-				{% else %}
-					<p>No image selected</p>
-				{% endif %}
-		{% endfor %}
+  {% for block in section.blocks %}
+    {% if block.settings.image %}
+      <img src="{{ block.settings.image | img_url: 'large' }}" alt="{{ block.settings.image.alt | escape }}">
+    {% else %}
+      <p>No image selected</p>
+    {% endif %}
+  {% endfor %}
 </div>
 
 {% javascript %}
- let images = document.querySelectorAll('#lpImgGallery img');
+  let images = document.querySelectorAll('#lpImgGallery img');
 
- // Modal
+// Modal
   let wrapper = document.getElementById("lpModalWrapper");
-  //Modal image wrapper
+
+// Modal image wrapper
   let imgWrapper = document.getElementById("fullImg");
   let close = document.getElementById("lpImgModalClose");
   let next = document.getElementById("lpNextImage");
@@ -171,85 +152,80 @@
   let indexOfCurrent = null;
 
   images.forEach((img, index) => {
-      img.addEventListener("click", () => {
-          indexOfCurrent = index;
-          openModal(indexOfCurrent);
-      });
+    img.addEventListener("click", () => {
+      indexOfCurrent = index;
+      openModal(indexOfCurrent);
+    });
   });
 
   function openModal(index) {
-      wrapper.style.display = "flex";
-      imgWrapper.src = images[index].getAttribute('src');
-      imgWrapper.classList.remove("fade-out");
-      hideArrows();
-      document.body.style.overflow = "hidden";
+    wrapper.style.display = "flex";
+    imgWrapper.src = images[index].getAttribute('src');
+    imgWrapper.classList.remove("fade-out");
+    hideArrows();
+    document.body.style.overflow = "hidden";
   }
 
   close.addEventListener("click", () => closeModal());
 
   function closeModal() {
-      wrapper.style.display = "none";
-      document.body.style.overflow = "unset";
+    wrapper.style.display = "none";
+    document.body.style.overflow = "unset";
   }
 
   next.addEventListener("click", () => {
     imgWrapper.classList.add("fade-out"); // Start fade out animation
-      if (indexOfCurrent + 1 <= images.length - 1) {
-          indexOfCurrent = indexOfCurrent + 1;
-          setTimeout(() => {
-              // imgWrapper.classList.remove("fade-out")
-            openModal(indexOfCurrent);
-
-          }, 400);
-      }
+    if (indexOfCurrent + 1 <= images.length - 1) {
+      indexOfCurrent = indexOfCurrent + 1;
+      setTimeout(() => {
+        openModal(indexOfCurrent);
+      }, 400);
+    }
   });
 
-	
 
   prev.addEventListener("click", () => {
     imgWrapper.classList.add("fade-out"); // Start fade out animation
-      if (indexOfCurrent - 1 >= 0) {
-          indexOfCurrent = indexOfCurrent - 1;
-					setTimeout(() => {
-						openModal(indexOfCurrent);
+    if (indexOfCurrent - 1 >= 0) {
+      indexOfCurrent = indexOfCurrent - 1;
+      setTimeout(() => {
+        openModal(indexOfCurrent);
 
-					}, 400);
-      }
+      }, 400);
+    }
   });
 
   function hideArrows() {
-      prev.style.display = "unset";
-      next.style.display = "unset";
-      if (indexOfCurrent == images.length - 1) {
-          next.style.display = "none";
-      }
-      if (indexOfCurrent == 0) {
-          prev.style.display = "none";
-      }
+    prev.style.display = "unset";
+    next.style.display = "unset";
+    if (indexOfCurrent == images.length - 1) {
+      next.style.display = "none";
+    }
+    if (indexOfCurrent == 0) {
+      prev.style.display = "none";
+    }
   }
 
-  document.addEventListener("keydown", ({ key }) => {
-      if (key === "Escape") {
-          closeModal();
-      }
-      if (key === "ArrowRight") {
-          next.click();
-      }
-      if (key === "ArrowLeft") {
-          prev.click();
-      }
+  document.addEventListener("keydown", ({key}) => {
+    if (key === "Escape") {
+      closeModal();
+    }
+    if (key === "ArrowRight") {
+      next.click();
+    }
+    if (key === "ArrowLeft") {
+      prev.click();
+    }
   });
 
   wrapper.addEventListener("click", (e) => {
-    if (!imgWrapper.contains(e.target) && e.target !== next && e.target !== prev) {
+    if (! imgWrapper.contains(e.target) && e.target !== next && e.target !== prev) {
       closeModal();
     }
   });
 
 
-
 {% endjavascript %}
-
 
 
 {% schema %}
@@ -261,28 +237,27 @@
         "title": "Image Gallery"
       }
     },
-		"blocks": [
-			{
-				"type": "image",
-				"name": "Image",
-				"settings": [
-					{
-						"type": "image_picker",
-						"id": "image",
-						"label": "Image"
-					}
-				]
-			}
-		],
-		"class":"image-gallery",
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "class": "image-gallery",
     "presets": [
       {
         "name": "Image Gallery",
-				"blocks": [
+        "blocks": [
           {
             "type": "image"
-          },
-          {
+          }, {
             "type": "image"
           }
         ]

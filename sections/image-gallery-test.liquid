@@ -1,114 +1,222 @@
 {%- style -%}
-   .body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-    }
+  .body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial
+    , sans-serif;
+    background-color: #f0f0f0;
+  }
 
-    .gallery-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+  .gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
 
+  .gallery {
+    column-count: 3;
+    column-gap: 20px;
+  }
+
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: 1s ease;
+
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    transition: 1s ease;
+  }
+
+  /* Wrapper */
+  .lp-image-wrapper {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .lp-image-wrapper img {
+    width: 80%;
+    max-width: 500px;
+    position: absolute;
+    /* transition: transform 0.4s ease-in-out; */
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .lp-image-wrapper span {
+    position: absolute;
+    font-family: sans-serif;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 8px;
+  }
+
+  .fade-out {
+    opacity: 0;
+  }
+
+  #lpImgModalClose {
+    top: 5%;
+    right: 5%;
+    border: 0.5px #fff solid;
+    border-radius: 20%;
+  }
+
+  #lpNextImage {
+    top: 45%;
+    right: 5%;
+    border: 0.5px #fff solid;
+    border-radius: 20%;
+  }
+
+  #lpPrevImage {
+    top: 45%;
+    left: 5%;
+    border: 0.5px #fff solid;
+    border-radius: 20%;
+  }
+
+  @media (min-width: 768px) {
+    .gallery-item:hover {
+      transform: scale(0.9);
+      box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+    }
+  }
+
+  @media (max-width: 768px) {
     .gallery {
-        column-count: 3;
-        column-gap: 20px;
+      column-count: 2;
     }
+  }
 
-    .gallery-item {
-        break-inside: avoid;
-        margin-bottom: 20px;
-        overflow: hidden;
-        border-radius: 8px;
-        transition: 1s ease;
-
+  @media (max-width: 480px) {
+    .gallery {
+      column-count: 1;
     }
+  }
 
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        display: block;
-        cursor: pointer;
-        transition: 1s ease;
-    }
 
-    @media (min-width: 768px) {
-      /* .gallery-item img:hover {
-        transform: scale(0.9);
-        box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
-      } */
-      .gallery-item:hover {
-        transform: scale(0.9);
-        box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
-      }
-    }
-
-    @media (max-width: 768px) {
-        .gallery {
-            column-count: 2;
-        }
-
-        
-    }
-
-    @media (max-width: 480px) {
-        .gallery {
-            column-count: 1;
-        }
-    }
-
-    
 {%- endstyle -%}
 
 
-
+<div class="lp-image-wrapper" id="lpModalWrapper">
+  <img src="" id="fullImg" />
+  <span id="lpImgModalClose">&#10005;
+  </span>
+  <span id="lpNextImage">&#8594;</span>
+  <span id="lpPrevImage">&#8592;</span>
+</div>
 
 <div class="gallery-container">
-    <div class="gallery" id="imageGallery">
-      {% for block in section.blocks %}
-				{% if block.settings.image %}
-					<div class="gallery-item">
-            <img src="{{ block.settings.image | img_url : 'large'}}" alt="Image">
-          </div>
-				{% else %}
-					<p>No image selected</p>
-				{% endif %}
-		{% endfor %}
-    </div>
+  <div class="gallery" id="imageGallery">
+    {% for block in section.blocks %}
+      {% if block.settings.image %}
+        <div class="gallery-item" id="lpImgGallery">
+          <img src="{{ block.settings.image | img_url : 'large'}}" alt="Image">
+        </div>
+      {% else %}
+        <p>No image selected</p>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 
 {% javascript %}
-  // const imageGallery = document.getElementById('imageGallery');
+  let images = document.querySelectorAll('#lpImgGallery img');
 
-  // const images = [
-  //     { src: "https://picsum.photos/id/10/800/600", alt: "Landscape" },
-  //     { src: "https://picsum.photos/id/20/600/800", alt: "Architecture" },
-  //     { src: "https://picsum.photos/id/30/700/500", alt: "Nature" },
-  //     { src: "https://picsum.photos/id/40/900/600", alt: "People" },
-  //     { src: "https://picsum.photos/id/50/600/900", alt: "Objects" },
-  //     { src: "https://picsum.photos/id/60/800/800", alt: "Animals" },
-  //     { src: "https://picsum.photos/id/70/700/700", alt: "Technology" },
-  //     { src: "https://picsum.photos/id/80/900/500", alt: "City" },
-  //     { src: "https://picsum.photos/id/90/600/700", alt: "Food" },
-  // ];
+// Modal
+  let wrapper = document.getElementById("lpModalWrapper");
 
-  // function createImageElement(image) {
-  //     const galleryItem = document.createElement('div');
-  //     galleryItem.className = 'gallery-item';
+// Modal image wrapper
+  let imgWrapper = document.getElementById("fullImg");
+  let close = document.getElementById("lpImgModalClose");
+  let next = document.getElementById("lpNextImage");
+  let prev = document.getElementById("lpPrevImage");
+  let indexOfCurrent = null;
 
-  //     const img = document.createElement('img');
-  //     img.src = image.src;
-  //     img.alt = image.alt;
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => {
+      indexOfCurrent = index;
+      openModal(indexOfCurrent);
+    });
+  });
 
-  //     galleryItem.appendChild(img);
-  //     imageGallery.appendChild(galleryItem);
-  // }
+  function openModal(index) {
 
-  // images.forEach(createImageElement);
+    wrapper.style.display = "flex";
+    imgWrapper.src = images[index].getAttribute('src');
+
+    imgWrapper.classList.remove("fade-out");
+
+    hideArrows();
+    document.body.style.overflow = "hidden";
+    console.log("hit")
+  }
+
+  close.addEventListener("click", () => closeModal());
+  function closeModal() {
+    wrapper.style.display = "none";
+    document.body.style.overflow = "unset";
+  }
+
+  function hideArrows() {
+    prev.style.display = "unset";
+    next.style.display = "unset";
+    if (indexOfCurrent == images.length - 1) {
+      next.style.display = "none";
+    }
+    if (indexOfCurrent == 0) {
+      prev.style.display = "none";
+    }
+  }
+
+  function closeModal() {
+    wrapper.style.display = "none";
+    document.body.style.overflow = "unset";
+  }
+
+  next.addEventListener("click", () => {
+
+    imgWrapper.classList.add("fade-out"); // Start fade out animation
+    if (indexOfCurrent + 1 <= images.length - 1) {
+      indexOfCurrent = indexOfCurrent + 1;
+      setTimeout(() => {
+        openModal(indexOfCurrent);
+      }, 400);
+    }
+  });
+
+  prev.addEventListener("click", () => {
+    imgWrapper.classList.add("fade-out"); // Start fade out animation
+    if (indexOfCurrent - 1 >= 0) {
+      indexOfCurrent = indexOfCurrent - 1;
+      setTimeout(() => {
+        openModal(indexOfCurrent);
+      }, 400);
+    }
+  });
+
+  wrapper.addEventListener("click", (e) => {
+    if (! imgWrapper.contains(e.target) && e.target !== next && e.target !== prev) {
+      closeModal();
+    }
+  });
+
 {% endjavascript %}
-
 
 {% schema %}
   {
@@ -119,28 +227,27 @@
         "title": "Image Gallery"
       }
     },
-		"blocks": [
-			{
-				"type": "image",
-				"name": "Image",
-				"settings": [
-					{
-						"type": "image_picker",
-						"id": "image",
-						"label": "Image"
-					}
-				]
-			}
-		],
-		"class":"body",
+    "blocks": [
+      {
+        "type": "image",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "class": "body",
     "presets": [
       {
         "name": "Image Gallery2",
-				"blocks": [
+        "blocks": [
           {
             "type": "image"
-          },
-          {
+          }, {
             "type": "image"
           }
         ]
