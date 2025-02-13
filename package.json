@@ -1,0 +1,13 @@
+{
+  "name": "handprints",
+  "version": "1.0.0",
+  "description": "Under construction shopify website I am helping a friend create for herself.\r None of the design is my doing.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "shopify theme dev --store cut0r6-1c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

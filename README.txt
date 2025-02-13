@@ -3,6 +3,10 @@ None of the design is my doing.
 
 
 shopify theme dev --store {store-id}
+shopify theme dev --store cut0r6-1c
+
+store id: cut0r6-1c
+
 
 shopify theme list
 

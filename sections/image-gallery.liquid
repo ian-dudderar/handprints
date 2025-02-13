@@ -1,24 +1,39 @@
 {%- style -%}
-  .image-gallery {
-    padding: 0 200px;
+  .body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial
+    , sans-serif;
+    background-color: #f0f0f0;
   }
 
-
-  .lp-img-gallery {
-    width: 80%;
-    margin: 100px auto 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-    grid-gap: 30px;
+  .gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
 
-  .lp-img-gallery img {
+  .gallery {
+    column-count: 3;
+    column-gap: 20px;
+  }
+
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: 1s ease;
+
+  }
+
+  .gallery-item img {
     width: 100%;
+    height: auto;
+    display: block;
     cursor: pointer;
     transition: 1s ease;
   }
-
 
   /* Wrapper */
   .lp-image-wrapper {
@@ -34,11 +49,11 @@
     z-index: 100;
   }
 
+
   .lp-image-wrapper img {
     width: 80%;
     max-width: 500px;
     position: absolute;
-    /* transition: transform 0.4s ease-in-out; */
     transition: opacity 0.3s ease-in-out;
   }
 
@@ -48,6 +63,11 @@
     color: #fff;
     cursor: pointer;
     padding: 5px 8px;
+  }
+
+
+  .fade-out {
+    opacity: 0;
   }
 
   #lpImgModalClose {
@@ -71,55 +91,33 @@
     border-radius: 20%;
   }
 
-  .slide-left {
-    transform: translateX(-100%);
-  }
-
-  .slide-right {
-    transform: translateX(100%);
-  }
-
-  .reset-position {
-    transform: translateX(0);
-  }
-
-  .fade-out {
-    opacity: 0;
-  }
-
-  .fade-in {
-    opacity: 1;
-  }
-
-  @media (min-width: 640px) {
-    #lpImgModalClose,
-    #lpNextImage,
-    #lpPrevImage {
-      background-color: unset;
-      border: unset;
-    }
-  }
   @media (min-width: 768px) {
-
-    .lp-img-gallery img:hover {
-      transform: scale(0.8);
+    .gallery-item:hover {
+      transform: scale(0.9);
       box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
     }
   }
-  @media (max-width: 768px) {
-    .image-gallery {
-      padding: 0
-    }
-    .lp-img-gallery {
-      width: 80%;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-    }
 
+  @media (max-width: 768px) {
+    .gallery {
+      column-count: 2;
+    }
   }
+
+
+  /*
+
+   @media (max-width: 480px) { 
+   .gallery { 
+   column-count: 1; 
+   } 
+   } 
+*/
+
+
 {%- endstyle -%}
+
+
 <div class="lp-image-wrapper" id="lpModalWrapper">
   <img src="" id="fullImg" />
   <span id="lpImgModalClose">&#10005;
@@ -128,14 +126,18 @@
   <span id="lpPrevImage">&#8592;</span>
 </div>
 
-<div class="lp-img-gallery" id="lpImgGallery">
-  {% for block in section.blocks %}
-    {% if block.settings.image %}
-      <img src="{{ block.settings.image | img_url: 'large' }}" alt="{{ block.settings.image.alt | escape }}">
-    {% else %}
-      <p>No image selected</p>
-    {% endif %}
-  {% endfor %}
+<div class="gallery-container">
+  <div class="gallery" id="imageGallery">
+    {% for block in section.blocks %}
+      {% if block.settings.image %}
+        <div class="gallery-item" id="lpImgGallery">
+          <img src="{{ block.settings.image | img_url : 'large'}}" alt="Image">
+        </div>
+      {% else %}
+        <p>No image selected</p>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 
 {% javascript %}
@@ -159,41 +161,22 @@
   });
 
   function openModal(index) {
+
     wrapper.style.display = "flex";
     imgWrapper.src = images[index].getAttribute('src');
+
     imgWrapper.classList.remove("fade-out");
+
     hideArrows();
     document.body.style.overflow = "hidden";
+    console.log("hit")
   }
 
   close.addEventListener("click", () => closeModal());
-
   function closeModal() {
     wrapper.style.display = "none";
     document.body.style.overflow = "unset";
   }
-
-  next.addEventListener("click", () => {
-    imgWrapper.classList.add("fade-out"); // Start fade out animation
-    if (indexOfCurrent + 1 <= images.length - 1) {
-      indexOfCurrent = indexOfCurrent + 1;
-      setTimeout(() => {
-        openModal(indexOfCurrent);
-      }, 400);
-    }
-  });
-
-
-  prev.addEventListener("click", () => {
-    imgWrapper.classList.add("fade-out"); // Start fade out animation
-    if (indexOfCurrent - 1 >= 0) {
-      indexOfCurrent = indexOfCurrent - 1;
-      setTimeout(() => {
-        openModal(indexOfCurrent);
-
-      }, 400);
-    }
-  });
 
   function hideArrows() {
     prev.style.display = "unset";
@@ -206,15 +189,29 @@
     }
   }
 
-  document.addEventListener("keydown", ({key}) => {
-    if (key === "Escape") {
-      closeModal();
+  function closeModal() {
+    wrapper.style.display = "none";
+    document.body.style.overflow = "unset";
+  }
+
+  next.addEventListener("click", () => {
+
+    imgWrapper.classList.add("fade-out"); // Start fade out animation
+    if (indexOfCurrent + 1 <= images.length - 1) {
+      indexOfCurrent = indexOfCurrent + 1;
+      setTimeout(() => {
+        openModal(indexOfCurrent);
+      }, 400);
     }
-    if (key === "ArrowRight") {
-      next.click();
-    }
-    if (key === "ArrowLeft") {
-      prev.click();
+  });
+
+  prev.addEventListener("click", () => {
+    imgWrapper.classList.add("fade-out"); // Start fade out animation
+    if (indexOfCurrent - 1 >= 0) {
+      indexOfCurrent = indexOfCurrent - 1;
+      setTimeout(() => {
+        openModal(indexOfCurrent);
+      }, 400);
     }
   });
 
@@ -224,14 +221,11 @@
     }
   });
 
-
 {% endjavascript %}
-
 
 {% schema %}
   {
     "name": "Image Gallery",
-    "limit": 1,
     "locales": {
       "en": {
         "title": "Image Gallery"
@@ -250,7 +244,7 @@
         ]
       }
     ],
-    "class": "image-gallery",
+    "class": "body",
     "presets": [
       {
         "name": "Image Gallery",
